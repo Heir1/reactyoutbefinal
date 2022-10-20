@@ -1,0 +1,178 @@
+@media only screen and (max-width: 425px) {
+    .headerStyle{
+        /* display:  !important; */
+        height: 80px; 
+        background: #1b1b1b; 
+        position: -webkit-sticky; 
+        position: sticky;
+        top: 0;
+        /* border-bottom: 3px solid #d63384; */
+        border-bottom: 3px solid #dc3545;
+    }
+
+    .deskTop{
+        display: none;
+    }
+
+    .headerStyle1{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .sideStyle{
+        height: 50px; 
+        background: #242424;
+        position: fixed;
+        /* position: -webkit-sticky;
+        position: sticky;
+        left: 0; */
+    }
+
+    .sideStyle1{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        color: white;
+        text-align: center;
+        padding-top: 12px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
+    .searchStyle{
+        margin-top: 20px;
+    }
+    
+    .logo{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 15px;
+        border: 3px solid white;
+    }
+    
+    .profile{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 15px;
+        border: 3px solid #d63384;
+    }
+
+    .videoImage{
+        border-radius: 20px;
+        border: 3px solid grey;
+        transition: transform .4s;
+    }
+
+    .thumbnail{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
+    .logoutStyle{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .headerStyle{
+        height: 80px; 
+        background: #1b1b1b; 
+        position: -webkit-sticky; 
+        position: sticky;
+        top: 0;
+        border-bottom: 3px solid white;
+    }
+    
+    .sideStyle{
+        height: 200vh; 
+        background: #242424;
+        /* position: -webkit-sticky;
+        position: sticky;
+        left: 0; */
+    }
+
+    .sideStyle1{
+        color: white;
+        padding-top: 50px;
+        font-weight: bold;
+    }
+
+    .funcStyle{
+        background: black;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-style: italic;
+        border-top: 1px solid white;
+        border-radius: 20px;
+        text-align: center;
+        transition: transform .4s;
+    }
+
+    .funcStyle:hover{
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    
+    .logoutStyle{
+        margin-top: 50px;
+    }
+    .searchStyle{
+        margin-top: 20px;
+    }
+    
+    .logo{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 15px;
+        border: 3px solid white;
+    }
+    
+    .profile{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 15px;
+        border: 3px solid #d63384;
+    }
+
+    .videoImage{
+        border-radius: 20px;
+        border: 3px solid grey;
+        transition: transform .4s;
+    }
+
+    .videoImage:hover{
+        transform: scale(1.1);
+        opacity: 0.5;
+        border: 3px solid #d63384;
+    }
+
+    .thumbnail{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
+    .thumbnail:hover{
+        cursor: pointer;
+    }
+
+    .logoutStyle{
+        width: 100%;
+    }
+
+    .channelDesign{
+        border: 2px solid black;
+        border-radius: 20px;
+        padding-top: 20px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        background: #242424;
+        color: white;
+    }
+
+    .caption{
+        margin-top: 7px;
+    }
+}
