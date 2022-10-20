@@ -1,22 +1,30 @@
 import React from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 export const Siderbar = () => {
   return (
-            <div className="col-md-2 col-sm-2 col-xs-2 sideStyle">
-                <div className="row sideStyle1">
-                    <div className="col-xs-3 funcStyle">
-                        Home
-                    </div>
-                    <div className="col-xs-3 funcStyle">
-                        Channels
-                    </div>
-                    <div className="col-xs-3 funcStyle">
-                        Likes
-                    </div>
-                    <div className="col-xs-3 logoutStyle">
-                        <button className="btn btn-danger logoutStyle" >Logout</button>
-                    </div>
+    <div className="col-md-2 col-sm-2 col-xs-2 sideStyle">
+        <div className="row sideStyle1">
+            <NavLink to={"/mysubscriptions"} style={{textDecoration:"none", color:'white'}}>
+                <div className="col-xs-3 funcStyle">
+                    Home
                 </div>
+            </NavLink>
+            <NavLink to={"/mychannels"} style={{ textDecoration:"none", color:'white'}}>
+                <div className="col-xs-3 funcStyle">
+                    Channels
+                </div>
+            </NavLink>
+            <NavLink to={"/mylikes"} style={{textDecoration:"none", color:'white'}}>
+                <div className="col-xs-3 funcStyle">
+                    Likes
+                </div>
+            </NavLink>
+
+            <div className="col-xs-3 logoutStyle">
+                <button className="btn btn-danger logoutStyle" >Logout</button>
             </div>
+        </div>
+    </div>
   )
 }
