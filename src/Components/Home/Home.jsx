@@ -41,7 +41,7 @@ export const Home = () => {
         <div className="container-fluid">
             <div className="row">
                 <Siderbar/>
-                <Homevideo/>
+                <Homevideo videoFilter={videoFilter} videos={videos} loading={loading} />
             </div>
         </div>   
     </React.Fragment>

@@ -3,7 +3,7 @@ import youtube from '../../images/youtube.png'
 import profile0 from '../../images/profile.png'
 import { Container, Row, Col } from 'react-bootstrap';
 
-export const Header = () => {
+export const Header = ({setVideoFilter}) => {
 
     const [profile, setProfile] = useState("");
   
@@ -47,7 +47,7 @@ export const Header = () => {
                     </div>   
                 </div>
                 <div className="col-md-6 col-sm-6 col-xs-6 searchStyle">
-                    <input type="text" placeholder="Search a video" className="form-control"/>
+                    <input type="text" placeholder="Search a video" className="form-control" onChange={(e) => setVideoFilter(e.target.value)}/>
                 </div>
                 <div className="col-md-3 col-sm-3 col-xs-3">
                     <div className="row">
