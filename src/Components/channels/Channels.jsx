@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Header } from '../Header./Header'
 import { Siderbar } from '../Siderbar/Siderbar'
 import { Channel } from './Channel'
+import { Spinner } from '../Spinner/Spinner'
 
 export const Channels = () => {
 
@@ -13,11 +14,20 @@ export const Channels = () => {
 
     return(
         <React.Fragment>
-            <Header/>
+            <Header setVideoFilter={setVideoFilter} />
             <div className="container-fluid">
                 <div className="row">
                     <Siderbar/>
-                    <Channel/>
+                    {
+                        ! channels ? (
+                            <Spinner/>
+                        )
+                        :
+                        (
+                            <Channel channels={channels} videoFilter={videoFilter} />
+                        )
+                    }
+                    
                 </div>
             </div>   
         </React.Fragment>

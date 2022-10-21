@@ -26,7 +26,7 @@ export const Homevideo = ({videos, videoFilter, loading}) => {
                         return videoTitle
                         }
                         }).map((video, index) => (
-                            <div className="col-md-3 col-sm-4">
+                            <div className="col-md-3 col-sm-4" key={index}>
                                 <NavLink to={video.id.videoId} style={{textDecoration : "none", color : "black"}}>
                                     <div className="thumbnail">
                                         <img src={video.snippet.thumbnails.high.url} alt="Lights" style={{width:"100%"}} className="videoImage"/>
