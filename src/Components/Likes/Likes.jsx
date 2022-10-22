@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Header } from '../Header./Header'
 import { Siderbar } from '../Siderbar/Siderbar'
 import { Like } from './Like'
+import { Spinner } from '../Spinner/Spinner'
 
 export const Likes = () => {
 
@@ -11,7 +12,7 @@ export const Likes = () => {
   const [loading, setLoading] = useState(false)
   const [videoFilter, setVideoFilter] = useState("");
 
-  useEffect(() => {
+  useEffect(()=>{
 
     setLoading(true)
     
@@ -19,14 +20,12 @@ export const Likes = () => {
 
       const results = await axios.get('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&myRating=like&key=AIzaSyAxpjZGN2NGfGfa3djYxcOt7Mx6GOq4quU',
           {
-            headers : {authorization : `Bearer ${access_token}`}
+              headers : {authorization : `Bearer ${access_token}`}
           }
       )
 
       setLikes(results.data.items)
-
       // console.log(results.data.items);
-
       setLoading(false);
 
     }
@@ -40,8 +39,10 @@ export const Likes = () => {
         <Header setVideoFilter={setVideoFilter} />
         <div className="container-fluid">
             <div className="row">
-              <Siderbar/>
-              <Like videos={likes} videoFilter={videoFilter} loading={loading} />
+                <Siderbar/>
+                    <Like videos={likes} videoFilter={videoFilter} loading={loading} />
+
+                
             </div>
         </div>   
     </React.Fragment>

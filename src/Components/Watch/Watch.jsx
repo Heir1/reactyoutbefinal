@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Header } from '../Header./Header'
+// import Header  from '../Header/Header'
+import { Header } from '../Header./Header';
 import { Siderbar } from '../Siderbar/Siderbar'
 
 export const Watch = () => {

@@ -32,6 +32,11 @@ export const Siderbar = () => {
                 <button className="btn btn-danger logoutStyle" onClick={logout} >Logout</button>
             </div>
         </div>
+     
     </div>
   )
 }
+
+   // <div className="col-xs-3 logoutStyle">
+        //     <button className="btn btn-danger logoutStyle" onClick={logout} >Logout</button>
+        // </div>

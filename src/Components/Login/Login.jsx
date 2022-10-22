@@ -54,7 +54,8 @@ export const Login = () => {
               console.log(account);
               localStorage.setItem('access_token', JSON.stringify(access_token));
     
-              navigate('/mysubscriptions');
+              // navigate('/mysubscriptions');
+              navigate('/popularvideos');
             }
           fetchData();
         }   
