@@ -17,9 +17,11 @@ function App() {
         <Route path="/popularvideos" element={<Popular/>} />
         <Route path="/mychannels" element={<Channels/>} />
         <Route path="/mylikes" element={<Likes/>} />
-        <Route path='*' element={<Login/>}  replace/>
         <Route path='/mysubscriptions/:id' element={<Watch/>} />
         <Route path='/popularvideos/:id' element={<Watch/>} />
+        <Route path='/mychannels/:id' element={<Home/>} />
+        <Route path='/mychannels/:channelId/:id' element={<Watch/>} />
+        <Route path='*' element={<Login/>}  replace/>
       </Routes>
     </div>
   );

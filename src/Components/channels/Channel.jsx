@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 
 export const Channel = ({channels, videoFilter}) => {
@@ -12,23 +13,25 @@ export const Channel = ({channels, videoFilter}) => {
                     }
                 }).map((channel, index) => (
                     <div className="col-md-5 col-sm-5 channelDesign" key={index}>
-                        <div className="row">
-                            <div className="col-md-4 col-sm-4">
-                                <div className="circle">
-                                    <img src={channel.snippet.thumbnails.default.url} alt="Nature" style={{width:"100%"}} className=" videoImage"/>
-                                    <div className="caption">
-                                    <p>{channel.snippet.title}</p>
+                        <NavLink to={channel.snippet.resourceId.channelId} style={{color:"white", textDecoration:"none"}}>
+                            <div className="row">
+                                <div className="col-md-4 col-sm-4">
+                                    <div className="circle">
+                                        <img src={channel.snippet.thumbnails.default.url} alt="Nature" style={{width:"100%"}} className=" videoImage"/>
+                                        <div className="caption">
+                                        <p>{channel.snippet.title}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-8 col-sm-8">
+                                    <div className="thumbnail">
+                                        <div className="caption">
+                                            <p>{(channel.snippet.description).length > 200 ? `${(channel.snippet.description).substring(0,200)}...` : channel.snippet.description }.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-8 col-sm-8">
-                                <div className="thumbnail">
-                                    <div className="caption">
-                                        <p>{(channel.snippet.description).length > 200 ? `${(channel.snippet.description).substring(0,200)}...` : channel.snippet.description }.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </NavLink>
                     </div>
                 ))
             }

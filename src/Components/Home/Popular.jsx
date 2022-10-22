@@ -17,7 +17,7 @@ const Popular = () => {
 
     const fetchData = async () => {
         
-      const results = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&maxResults=20&key=AIzaSyAxpjZGN2NGfGfa3djYxcOt7Mx6GOq4quU`)
+      const results = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=FR&maxResults=20&key=AIzaSyAxpjZGN2NGfGfa3djYxcOt7Mx6GOq4quU`)
 
 
       setVideos(results.data.items)

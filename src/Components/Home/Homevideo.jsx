@@ -1,14 +1,6 @@
 import React from 'react'
 import { Spinner } from '../Spinner/Spinner'
 import { NavLink } from 'react-router-dom'
-import hqdefault1 from '../../images/hqdefault1.jpg'
-import hqdefault2 from '../../images/hqdefault2.jpg'
-import hqdefault3 from '../../images/hqdefault3.jpg'
-import hqdefault4 from '../../images/hqdefault4.jpg'
-import hqdefault5 from '../../images/hqdefault5.jpg'
-import hqdefault6 from '../../images/hqdefault6.jpg'
-import hqdefault7 from '../../images/hqdefault7.jpg'
-import hqdefault8 from '../../images/hqdefault8.jpg'
 
 export const Homevideo = ({videos, videoFilter, loading}) => {
   return (

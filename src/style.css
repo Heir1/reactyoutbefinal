@@ -177,6 +177,10 @@
         color: white;
     }
 
+    .channelDesign:hover{
+        cursor: pointer;
+    }
+
     .caption{
         margin-top: 7px;
     }

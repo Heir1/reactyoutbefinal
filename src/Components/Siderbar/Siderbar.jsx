@@ -12,7 +12,7 @@ export const Siderbar = () => {
   return (
     <div className="col-md-2 col-sm-2 col-xs-2 sideStyle">
         <div className="row sideStyle1">
-            <NavLink to={"/mysubscriptions"} style={{textDecoration:"none", color:'white'}}>
+            <NavLink to={"/popularvideos"} style={{textDecoration:"none", color:'white'}}>
                 <div className="col-xs-3 funcStyle">
                     Home
                 </div>
