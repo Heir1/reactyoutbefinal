@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Header } from '../Header./Header'
+import { Header } from '../Header/Header'
 import { Siderbar } from '../Siderbar/Siderbar'
 import { Channel } from './Channel'
 import { Spinner } from '../Spinner/Spinner'

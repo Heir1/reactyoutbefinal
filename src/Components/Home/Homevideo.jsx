@@ -14,7 +14,7 @@ export const Homevideo = ({videos, videoFilter, loading}) => {
                 <div className="row">
                     {
                         videos.filter(videoTitle => {
-                        if((videoTitle.snippet.title.toLowerCase()).includes(videoFilter.toLowerCase())){
+                        if((videoTitle.snippet.title.toLowerCase()).includes((videoFilter.toLowerCase()).trim())){
                         return videoTitle
                         }
                         }).map((video, index) => (

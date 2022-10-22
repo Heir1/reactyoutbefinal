@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import youtube from '../../images/youtube.png'
 import profile0 from '../../images/profile.png'
 import { Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-export const Header = ({setVideoFilter}) => {
+export const Header = ({setVideoFilter, setsearchvid, searchVid}) => {
 
     const [profile, setProfile] = useState("");
+    const [searchChannel, setSearchannel] = useState("");
+    const navigate = useNavigate();
   
     let account;
   
@@ -32,6 +35,31 @@ export const Header = ({setVideoFilter}) => {
     
       }, [])
 
+      const videoFilterHandler = (e) => {
+        setVideoFilter(e.target.value)
+        setSearchannel(e.target.value)
+      }
+
+      const searchVideo = (e) => {
+
+          e.preventDefault();
+
+          if((searchChannel.trim().length) === 0){
+            return alert("Veuillez saisir le nom de la vidéo que recherchez");
+          }
+
+            localStorage.getItem("searchvideo") && localStorage.removeItem('searchvideo')
+            localStorage.setItem("searchvideo", JSON.stringify(searchChannel))
+            setSearchannel("")
+            document.getElementById('filter').value = "";
+
+            if(!searchVid){
+                navigate('/searchedvideo')
+            }
+
+            setsearchvid(Date.now())
+      }
+
   return (
     <React.Fragment>
         
@@ -49,9 +77,8 @@ export const Header = ({setVideoFilter}) => {
                 <div className="col-md-6 col-sm-6 col-xs-6">
                     <div className="row">
                         <div className="col-md-12 col-sm-12 col-xs-12">
-                            <form class="example">
-                                <input type="text" placeholder="Search.." onChange={(e) => setVideoFilter(e.target.value)} /> 
-                                <button class="btn btn-danger"><i class="fa fa-search"></i></button>
+                            <form class="example1">
+                                <input type="text" id='filter' placeholder="Filter.." onChange={videoFilterHandler} />
                             </form>
                         </div>
                     </div>
@@ -78,3 +105,6 @@ export const Header = ({setVideoFilter}) => {
 
 
 // <input type="text" placeholder="Search a video" className="form-control" onChange={(e) => setVideoFilter(e.target.value)}/>
+
+
+// <button onClick={searchVideo} class="btn btn-danger"><i class="fa fa-search"></i></button>

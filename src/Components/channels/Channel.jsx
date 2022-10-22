@@ -8,7 +8,7 @@ export const Channel = ({channels, videoFilter}) => {
         <div className="row">
             {
                 channels.filter(channel => {
-                    if((channel.snippet.title.toLowerCase()).includes(videoFilter.toLowerCase())){
+                    if((channel.snippet.title.toLowerCase()).includes((videoFilter.toLowerCase()).trim())){
                         return channel
                     }
                 }).map((channel, index) => (

@@ -81,7 +81,49 @@
         margin-top: 20px;
     }
 
-    .example{
+    .example1{
+        margin-top: 19px;
+    }
+
+    form.example1 input[type=text] {
+        padding: 7px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 100%;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+      }
+      
+      form.example1 button {
+        float: left;
+        width: 20%;
+        padding: 7px;
+        /* background: #2196F3; */
+        /* background: #d63384; */
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+      }
+      
+      form.example1 button:hover {
+        background: #000;
+      }
+      
+      form.example1::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+
+      .example{
         margin-top: 19px;
     }
 
@@ -239,7 +281,45 @@
         border: 3px solid #d63384;
     }
 
-    form.example input[type=text] {
+    form.example1 input[type=text] {
+        padding: 7px;
+        padding-left: 20px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 100%;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        margin-top: 17px;
+      }
+      
+      form.example1 button {
+        float: left;
+        /* width: 10%; */
+        padding: 7px;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        margin-top: 17px;
+      }
+      
+      form.example1 button:hover {
+        background: #000;
+      }
+      
+      form.example1::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      form.example input[type=text] {
         padding: 7px;
         padding-left: 20px;
         font-size: 17px;

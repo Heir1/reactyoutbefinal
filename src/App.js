@@ -6,6 +6,7 @@ import { Channels } from './Components/channels/Channels';
 import { Likes } from './Components/Likes/Likes';
 import { Routes, Route } from 'react-router-dom';
 import { Watch } from './Components/Watch/Watch';
+import Search from './Components/Searchedvideo/Search';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/popularvideos/:id' element={<Watch/>} />
         <Route path='/mychannels/:id' element={<Home/>} />
         <Route path='/mychannels/:channelId/:id' element={<Watch/>} />
+        <Route path='/searchedvideo' element={<Search/>} />
         <Route path='*' element={<Login/>}  replace/>
       </Routes>
     </div>

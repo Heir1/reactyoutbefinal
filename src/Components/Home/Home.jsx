@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { Header } from '../Header./Header'
+import { Header } from '../Header/Header'
 import { Siderbar } from '../Siderbar/Siderbar'
 import { Homevideo } from './Homevideo'
 
@@ -29,7 +29,7 @@ export const Home = () => {
 
     const fetchData = async () => {
 
-      const results = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId.id}&maxResults=20&order=date&type=video&key=AIzaSyAxpjZGN2NGfGfa3djYxcOt7Mx6GOq4quU`)
+      const results = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId.id}&maxResults=20&order=date&type=video&key=AIzaSyDUeGQ6vAoOrjY6Q1HGVfnZ9CpZcvvxgt0`)
 
 
       setVideos(results.data.items)

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import { Header } from '../Header./Header'
+import { Header } from '../Header/Header'
 import { Siderbar } from '../Siderbar/Siderbar'
 import { Like } from './Like'
 import { Spinner } from '../Spinner/Spinner'
@@ -18,7 +18,7 @@ export const Likes = () => {
     
     const fetchData = async () => {
 
-      const results = await axios.get('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&myRating=like&key=AIzaSyAxpjZGN2NGfGfa3djYxcOt7Mx6GOq4quU',
+      const results = await axios.get('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&myRating=like&key=AIzaSyDUeGQ6vAoOrjY6Q1HGVfnZ9CpZcvvxgt0',
           {
               headers : {authorization : `Bearer ${access_token}`}
           }

@@ -18,7 +18,7 @@ export const Login = () => {
   
     useEffect(()=>{
         client = google.accounts.oauth2.initTokenClient({
-          client_id: '531892793302-vdaj6m02gk3lhmuslk4gt218qca3g38l.apps.googleusercontent.com',
+          client_id: '91619622787-8jf9i8aihflrj02etvssublqg6lb88go.apps.googleusercontent.com',
           scope: 'https://www.googleapis.com/auth/youtube.readonly',
           callback: (tokenResponse) => {
             setToken(tokenResponse.access_token)
@@ -37,7 +37,7 @@ export const Login = () => {
         } 
         else{
             const fetchData = async () => {
-              const results = await axios.get('https://youtube.googleapis.com/youtube/v3/subscriptions?part=snippet%2CcontentDetails&maxResults=50&mine=true&key=AIzaSyAxpjZGN2NGfGfa3djYxcOt7Mx6GOq4quU',
+              const results = await axios.get('https://youtube.googleapis.com/youtube/v3/subscriptions?part=snippet%2CcontentDetails&maxResults=50&mine=true&key=AIzaSyDUeGQ6vAoOrjY6Q1HGVfnZ9CpZcvvxgt0',
                     {
                       headers : {authorization : `Bearer ${access_token}`}
                     }
