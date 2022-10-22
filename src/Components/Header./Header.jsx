@@ -46,8 +46,15 @@ export const Header = ({setVideoFilter}) => {
                         </div>
                     </div>   
                 </div>
-                <div className="col-md-6 col-sm-6 col-xs-6 searchStyle">
-                    <input type="text" placeholder="Search a video" className="form-control" onChange={(e) => setVideoFilter(e.target.value)}/>
+                <div className="col-md-6 col-sm-6 col-xs-6">
+                    <div className="row">
+                        <div className="col-md-12 col-sm-12 col-xs-12">
+                            <form class="example">
+                                <input type="text" placeholder="Search.." onChange={(e) => setVideoFilter(e.target.value)} /> 
+                                <button class="btn btn-danger"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-md-3 col-sm-3 col-xs-3">
                     <div className="row">
@@ -68,3 +75,6 @@ export const Header = ({setVideoFilter}) => {
     </React.Fragment>
   )
 }
+
+
+// <input type="text" placeholder="Search a video" className="form-control" onChange={(e) => setVideoFilter(e.target.value)}/>
