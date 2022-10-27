@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './style.css';
+import { Login } from './Components/Login/Login';
+import { Home } from './Components/Home/Home';
+import Popular from './Components/Home/Popular';
+import { Channels } from './Components/channels/Channels';
+import { Likes } from './Components/Likes/Likes';
+import { Routes, Route } from 'react-router-dom';
+import { Watch } from './Components/Watch/Watch';
+import Search from './Components/Searchedvideo/Search';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Login/>} />
+        <Route path="/mysubscriptions" element={<Home/>} />
+        <Route path="/popularvideos" element={<Popular/>} />
+        <Route path="/mychannels" element={<Channels/>} />
+        <Route path="/mylikes" element={<Likes/>} />
+        <Route path='/mysubscriptions/:id' element={<Watch/>} />
+        <Route path='/popularvideos/:id' element={<Watch/>} />
+        <Route path='/mychannels/:id' element={<Home/>} />
+        <Route path='/mychannels/:channelId/:id' element={<Watch/>} />
+        <Route path='/searchedvideo' element={<Search/>} />
+        <Route path='*' element={<Login/>}  replace/>
+      </Routes>
     </div>
   );
 }
